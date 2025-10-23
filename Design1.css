@@ -1,0 +1,83 @@
+/* Setting general body design */
+
+html{
+    --header-height:60px;
+}
+
+body{
+    font-family:'Arial', sans-serif;    /* */
+    color: rgb(255, 255, 255);
+    background-color: rgb(70, 70, 70);
+    line-height: 130%;
+}
+
+/* general header design */
+
+header{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+/* h1 settings */
+header h1{
+    font-size: 2.5em;
+
+}
+
+
+/* Header styling */
+#header {
+    position: fixed; /* Sticks the header to the top */
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out; /* Smooth slide effect */
+    z-index: 1000;
+}
+
+/* The class that hides the header */
+#header.header--hidden {
+    transform: translateY(-110%); /* Moves the header up and out of sight */
+}
+
+
+/* Navigation link styling*/
+nav {
+    display: center;
+    /* justify-content: center;
+    text-align: center; */
+    gap: 20px;
+}
+
+
+nav a {
+    color: rgb(255, 255, 255);
+    /*text-decoration: none;*/
+    margin: 15px;
+    font-size: 14px;
+    text-align: center;
+} 
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+main{
+    padding-top: var(--header-height);
+    max-width: 100%;
+    margin: 40px auto;
+}
+
+section{
+    margin-bottom: 40px;
+}
+
+section h2{
+    color:rgb(255, 255, 255);
+    border-bottom: 2px solid;
+    margin: 10px 10px;
+}
