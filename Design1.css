@@ -81,3 +81,21 @@ section h2{
     border-bottom: 2px solid;
     margin: 10px 10px;
 }
+
+.projectContainer{
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.projectBox{
+    background-color: rgb(80, 80, 80);
+    border: 2px  rgb(255, 255, 255);
+    padding: 15px;
+    margin: 10% 15px;
+    border-radius: 6px;
+    width: 40%;
+    box-shadow: 6px 6px 8px rgba(255, 255, 255, 0.5);
+}
