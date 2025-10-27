@@ -10,17 +10,18 @@ body{
     background-color: rgb(55, 0, 255);
     line-height: 130%;
     align-items: center;
+    margin: 80px 80px;
 }
+
 
 /* general header design */
 
-header{
-    background-color: rgb(0, 255, 242);
-    color: rgb(60, 255, 0);
-    text-align: center;
-    align-items: center;
-   /* padding: 20px; */
-}
+
+
+
+
+
+
 
 /* h1 settings */
 header h1{
@@ -39,20 +40,59 @@ header h1{
     
 }
 
+/*
+header{
+    /*background-color: rgb(0, 60, 255);*/
+    /*color: rgb(60, 255, 0);
+    text-align: center;
+    position: fixed; /* Sticks the header to the top */
+    /*top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    background-color: rgb(20, 0, 200);
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.2);*/
+    /*transition: transform 0.3s ease-in-out; /* Smooth slide effect */
+    /*z-index: top;
+    padding: 20px;
+
+    /*align-items: center;
+   padding: 20px;
+
+
 
 /* Header styling */
 #header {
     position: fixed; /* Sticks the header to the top */
     top: 0;
-    width: auto;
+    left: 0;
+    right: 0;
+
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+    text-align: center;
+
     background-color: rgb(20, 0, 200);
-    padding: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: transform 0.3s ease-in-out; /* Smooth slide effect */
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    z-index: top;
+    padding: 10px 20px;
+}
+
+#header-image{
+   position: absolute;
+   left: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   /*box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);*/
+
+   height: 100px;
+   width: 100px;
+}
+
+#header-text{
+    display: inline-block;
 }
 
 /* The class that hides the header */
@@ -81,8 +121,8 @@ nav a:hover{
 }
 
 main{
-    --height:calc(var(--header-height) - 20px);
-    padding-top: var(--height);
+    /*--height:calc(var(--header-height) - 20px);*/
+    padding-top: var(--header-height);
     max-width: 100%;
     margin: 40px auto;
 }
@@ -129,8 +169,8 @@ section h2{
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .projectBox img{
-    width: 90%;
-    height: auto;
+    width: auto;
+    height: var(--header-height);
     border-radius: 6px;
     margin: 10px auto;
     display: block;
