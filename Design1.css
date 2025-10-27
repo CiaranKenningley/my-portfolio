@@ -6,24 +6,37 @@ html{
 
 body{
     font-family:'Arial', sans-serif;    /* */
-    color: rgb(255, 255, 255);
-    background-color: rgb(70, 70, 70);
+    color: rgb(60, 255, 0);
+    background-color: rgb(55, 0, 255);
     line-height: 130%;
+    align-items: center;
 }
 
 /* general header design */
 
 header{
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: rgb(0, 255, 242);
+    color: rgb(60, 255, 0);
     text-align: center;
-    padding: 20px;
+    align-items: center;
+   /* padding: 20px; */
 }
 
 /* h1 settings */
 header h1{
     font-size: 2.5em;
+    line-height: 1.3;
 
+}
+
+@media (max-width: 600px) {
+    header h1{
+        font-size: 1.8em;
+    }
+    main {
+        padding-top: var(--header-height);
+    }
+    
 }
 
 
@@ -31,12 +44,15 @@ header h1{
 #header {
     position: fixed; /* Sticks the header to the top */
     top: 0;
-    width: 100%;
-    background-color: #333;
+    width: auto;
+    background-color: rgb(20, 0, 200);
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: transform 0.3s ease-in-out; /* Smooth slide effect */
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* The class that hides the header */
@@ -47,18 +63,16 @@ header h1{
 
 /* Navigation link styling*/
 nav {
-    display: center;
-    /* justify-content: center;
-    text-align: center; */
     gap: 20px;
 }
 
 
 nav a {
-    color: rgb(255, 255, 255);
+    color: rgb(60, 255, 0);
     /*text-decoration: none;*/
     margin: 15px;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
 } 
 
@@ -67,18 +81,23 @@ nav a:hover{
 }
 
 main{
-    padding-top: var(--header-height);
+    --height:calc(var(--header-height) - 20px);
+    padding-top: var(--height);
     max-width: 100%;
     margin: 40px auto;
 }
 
 section{
+    color: rgb(60, 255, 0);
     margin-bottom: 40px;
+    text-align: center;
+    justify-content: center;
 }
 
 section h2{
-    color:rgb(255, 255, 255);
-    border-bottom: 2px solid;
+    text-align: center;
+    color:rgb(60, 255, 0);
+    border-bottom: 2px solid rgb(60, 255, 0);
     margin: 10px 10px;
 }
 
@@ -86,16 +105,33 @@ section h2{
     background-color: rgb(0, 0, 0);
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10%;
+    flex-direction: row;
 }
 
+
 .projectBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background-color: rgb(80, 80, 80);
-    border: 2px  rgb(255, 255, 255);
+    border: 10px solid rgb(255, 255, 255);
     padding: 15px;
-    margin: 10% 15px;
+    margin: 10% 10%;
     border-radius: 6px;
     width: 40%;
-    box-shadow: 6px 6px 8px rgba(255, 255, 255, 0.5);
+    /* box-shadow: 6px 6px 8px rgba(255, 255, 255, 0.5); */
+}
+
+.projectBox:hover{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.projectBox img{
+    width: 90%;
+    height: auto;
+    border-radius: 6px;
+    margin: 10px auto;
+    display: block;
 }

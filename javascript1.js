@@ -19,6 +19,8 @@
 //     lastScrollY = window.scrollY;
 // });
 
+
+//// Header Scroll Hide Show ////
 //Get header elememt
 const header = document.getElementById('header');
 
@@ -36,6 +38,8 @@ window.addEventListener('scroll',()=>{
 
 })
 
+//// adjust header height ////
+
 function getHeaderHeight (){
     
     const headerHeight= header.offsetHeight;
@@ -45,3 +49,16 @@ function getHeaderHeight (){
 
 getHeaderHeight();
 
+//// box highlight when mouse over ////
+
+// const projectBoxes = document.querySelectorAll('.projectBox');
+// projectBoxes.forEach(function(box) => {
+
+// projectBoxes.addEventListener('mouseover', (event) => {
+//         box.classList.add('.projectBox.highlight');
+//     });
+
+// projectBoxes.addEventListener('mouseout', (event) => {
+//         box.classList.remove('.projectBox.highlight');
+//     });
+// });
